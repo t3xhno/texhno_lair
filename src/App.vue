@@ -4,6 +4,7 @@ const myMessage = import.meta.env.VITE_HEHE;
 </script>
 
 <template>
+  <h1>PRODUCTION</h1>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
