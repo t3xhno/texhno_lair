@@ -3,7 +3,7 @@ name: Deploy to texhno.xyz
 on:
   push:
     branch:
-      - master
+      - prod
 
 jobs:
   deploy:

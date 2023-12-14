@@ -1,4 +1,4 @@
-name: Deploy to texhno.xyz
+name: Deploy to staging.texhno.xyz
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
       - name: Build the Vue app...
         run: npm run build
 
-      - name: Upload to texhno.xyz (prod)...
+      - name: Upload to texhno.xyz (staging)...
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
