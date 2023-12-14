@@ -9,26 +9,26 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-  strategy:
-    matrix:
-      node-version: [14.x, 16.x, 18.x]
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
 
-  steps:
-    - name: Checkout code...
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout code...
+        uses: actions/checkout@v3
 
-    - name: Install dependencies...
-      run: npm i
+      - name: Install dependencies...
+        run: npm i
 
-    - name: Build the Vue app...
-      run: npm run build
+      - name: Build the Vue app...
+        run: npm run build
 
-    - name: Upload to texhno.xyz (prod)...
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: /home/texhnoxy/public_html/
-        dangerous-clean-slate: true
+      - name: Upload to texhno.xyz (prod)...
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /home/texhnoxy/public_html/
+          dangerous-clean-slate: true
