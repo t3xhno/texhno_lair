@@ -2,8 +2,8 @@ name: Deploy to texhno.xyz
 
 on:
   push:
-    branch:
-      - master
+    branches:
+      - prod
 
 jobs:
   deploy:
