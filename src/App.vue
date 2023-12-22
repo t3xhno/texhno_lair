@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1>Hello, World.</h1>
+  <h1>PP tardi</h1>
 </template>
 
 <style scoped>
